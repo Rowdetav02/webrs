@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahra Medika</title>
+
+
+    <!-- Fonts Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<!-- My Style -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div class=container>
+        <div class="sidebar">
+            <div class="header">
+                <div class="list-item">
+                    <a href="indeks.html">
+                        <img src="sidebar/assets/Youtube.svg" alt="" class="icon">
+                        <span class="description-header">Zahra Medika</span>
+                </div>
+                <div class="illustration">
+                    <img src="sidebar/assets/Frame.png" alt="illustration">
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="list-item">
+                    <a href="indeks.html">
+                        <img src="sidebar/assets/Dashboard.svg" alt="" class="icon">
+                        <span class="description">Dashboard</span>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a href="about.html">
+                        <img src="sidebar/assets/About.svg" alt="" class="icon">
+                        <span class="description">About</span>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a href="team.html">
+                        <img src="sidebar/assets/Team.svg" alt="" class="icon">
+                        <span class="description">Team</span>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a href="schedule.html">
+                        <img src="sidebar/assets/Schedule.svg" alt="" class="icon">
+                        <span class="description">Schedule</span>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a href="registerweb.html">
+                        <img src="sidebar/assets/Form.svg" alt="" class="icon">
+                        <span class="description">Registration</span>
+                    </a>
+                </div>
+                <div class="list-item">
+                    <a href="setting.html">
+                        <img src="sidebar/assets/Setting.svg" alt="" class="icon">
+                        <span class="description">Setting</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="menu-button">
+                <input type="checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" id="menu-label" >
+                    <div id="hamburger"></div>
+                </label>
+            </div>
+
+
+            <div class="form">
+                <form>
+                <!-- letakkan field di sini -->
+                <fieldset>
+                <legend><h1>REGISTRASI PASIEN</h1></legend>
+                <table class="center">
+                    <tr> <td> <b> Data Pasien </b> </td> </tr>
+
+                    <tr>
+                        <td><label>No. Registrasi</label></td>
+                        <td>:</td>
+                        <td> <input type="number" name="noregis" placeholder="Masukkan nomor Registrasi" required > </td>
+
+                        <td>Kode Pasien</td>
+                        <td>:</td>
+                        <td><input type="text" name="kode" placeholder="Masukkan kode pasien" required></td>
+                    </tr>
+
+                    <tr>
+                    <td><label>Tanggal Kunjungan</label></td>
+                    <td>:</td>
+                    <td><input type="date" name="today" required></td>
+
+                    <td>Nama Pasien</td>
+                    <td>:</td>
+                    <td><input type="text" name="nama" placeholder="Masukkan nama pasien" required></td>
+                    </tr>
+
+                    <tr>
+                    <td><label>Jenis Registrasi</label></td>
+                    <td>:</td>
+                    <td>
+                    <select name="jenis" required>
+                        <option value ="UGD">UGD</option>
+                        <option value ="IGD">IGD</option>
+                        <option value ="ICU">ICU</option>
+                        <option value ="PCU">PCU</option>
+                    </select></td>
+
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                    <input type="radio" name="kelamin" value="Pria"> Pria
+                    <input type="radio" name="kelamin" value="Wanita"> Wanita
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td><label>Jenis Pasien</label></td>
+                    <td>:</td>
+                    <td><input type="checkbox" name="umum" value="UMUM" required>UMUM</td>
+
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td><input type="date" name="lahir" required></td>
+                    </tr>
+                </table>
+
+                </fieldset>
+
+                <fieldset>
+                    <input type="button" value="Proses">
+                    <input type="reset" value="Reset">  
+                </fieldset>
+
+                </form>
+
+                <fieldset>
+                <table>
+                <b>Info Data Pasien</b>
+                <tr>
+                    <td>No. Registrasi</td>
+                    <td>:</td>
+                    <td><span id="infoNoregis"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Kode Pasien</td>
+                    <td>:</td>
+                    <td><span id="infoKode"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Tanggal Kunjungan</td>
+                    <td>:</td>
+                    <td><span id="infoToday"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Nama Pasien</td>
+                    <td>:</td>
+                    <td><span id="infoNama"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Registrasi</td>
+                    <td>:</td>
+                    <td><span id="infoJenis"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td><span id="infoKelamin"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Pasien</td>
+                    <td>:</td>
+                    <td><span id="infoUmum"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Usia</td>
+                    <td>:</td>
+                    <td><span id="infoUsia"></span></td>
+                    <td>Tahun</td>
+                </tr>
+                </table>
+                </fieldset>               
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
